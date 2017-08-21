@@ -1,0 +1,54 @@
+{
+  "name": "test-legitometer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "node start-client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rallyjinx/test-legitometer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rallyjinx/test-legitometer/issues"
+  },
+  "homepage": "https://github.com/rallyjinx/test-legitometer#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "node-sass-chokidar": "0.0.3",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-loader": "^7.1.1",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "bookshelf": "^0.10.4",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^1.3.0",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "http-server": "^0.10.0",
+    "knex": "^0.13.0",
+    "morgan": "^1.8.2",
+    "pg": "^7.1.2",
+    "pg-native": "^2.0.1",
+    "prop-types": "^15.5.10",
+    "re-base": "^3.0.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-google-login-component": "^0.8.0",
+    "react-router": "^4.1.2",
+    "react-router-dom": "^4.1.2",
+    "react-scripts": "^1.0.11",
+    "semantic-ui-react": "^0.71.4",
+    "webpack": "^3.5.5"
+  }
+}
