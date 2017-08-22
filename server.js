@@ -9,11 +9,11 @@ require('dotenv').config()
 // Set up the express app
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/app/public')));
 
 app.get('/', function (req, res) {
   const index = path.join(__dirname, 'public', 'index.html');
- res.sendFile(index);
+ res.sendFile('./index.html');
 });
 
 // Log requests to the console.
