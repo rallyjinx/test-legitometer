@@ -10,7 +10,7 @@ require('dotenv').config()
 const app = express();
 
 app.get('/', function (req, res) {
-  res.render('index.html', {});
+  res.render('index', {});
 });
 
 // Log requests to the console.
