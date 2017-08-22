@@ -17,6 +17,7 @@ class StudentDashboard extends React.Component {
 
   componentDidMount() {
     // GET missions assigned to student user
+    console.log("student component mounted");
     axios.get('http://localhost:8888/api/missions')
       .then((res) => {
         const missions = res.data.map((mission) => {

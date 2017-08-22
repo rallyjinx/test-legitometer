@@ -14,9 +14,11 @@ class AdminDashboard extends React.Component {
   }
 
   componentDidMount() {
+    console.log("so, component mounted");
     axios.get('http://localhost:8888/api/missions')
       .then((res) => {
         //loop through the object and set the state
+        console.log("missions gotten");
         for(let key in res.data) {
           // assign state to temporary arrays
           let temp_mission = this.state.games.slice();

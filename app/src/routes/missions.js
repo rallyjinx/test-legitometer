@@ -24,7 +24,7 @@ function authorizedUser(req, res, next) {
 router.get('/api/missions', (req, res, next) => {
   // where user_id === logged_in user (req.session.user)
   let user = 1; // TODO temp thing
-
+  console.log("getting missions");
   Mission.forge().where({user_id: user}).fetchAll({withRelated: ['casefile'], debug:true})
     .then((missions) => {
       // convert data to JSON
@@ -39,7 +39,7 @@ router.get('/api/missions', (req, res, next) => {
         }
       }
 
-      console.log(missions)
+      console.log("these are the missions, they have been fetched-ed", missions)
       res.send(missions);
     })
 

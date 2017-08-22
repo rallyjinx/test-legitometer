@@ -9,10 +9,7 @@ class Header extends Component {
     this.toggleExperience = props.toggleExperience.bind(this);
   }
 
-  // handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-  handleItemClick(e, { name }) {
-    this.setState({ activeItem: name })
-  }
+   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render () {
     const { activeItem } = this.state
