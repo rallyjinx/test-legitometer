@@ -9,6 +9,8 @@ require('dotenv').config()
 // Set up the express app
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', function (req, res) {
   res.render('index', {});
 });
@@ -26,7 +28,6 @@ app.use(cookieSession({
 
 app.use(cors());
 
-//app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
