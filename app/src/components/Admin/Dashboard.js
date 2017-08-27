@@ -15,7 +15,7 @@ class AdminDashboard extends React.Component {
 
   componentDidMount() {
     console.log("so, component mounted");
-    axios.get('http://localhost:8888/api/missions')
+    axios.get('https://localhost:8888/api/missions')
       .then((res) => {
         //loop through the object and set the state
         console.log("missions gotten");

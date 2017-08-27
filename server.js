@@ -22,6 +22,7 @@ app.get('/', function (req, res) {
 // Log requests to the console.
 app.use(logger('dev'));
 
+// added from https://stackoverflow.com/questions/31552088/blocked-loading-http-mixed-content-on-heroku
 app.use(function (req, res, next){
   if (req.headers['x-forwarded-proto'] === 'https') {
     res.redirect('http://' + req.hostname + req.url);
