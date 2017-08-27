@@ -22,6 +22,14 @@ app.get('/', function (req, res) {
 // Log requests to the console.
 app.use(logger('dev'));
 
+app.use(function (req, res, next){
+  if (req.headers['x-forwarded-proto'] === 'https') {
+    res.redirect('http://' + req.hostname + req.url);
+  } else {
+    next();
+  }
+});
+
 // Parse incoming requests data (https://github.com/expressjs/body-parser)
 app.use(bodyParser.urlencoded({ extended: false })); //the internet says this should be true
 app.use(bodyParser.json());

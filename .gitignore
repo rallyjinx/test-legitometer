@@ -9,6 +9,7 @@
 # testing
 /coverage
 
+# DO NOT ignore this (included with -f)
 # production
 /build
 
