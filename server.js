@@ -9,8 +9,11 @@ require('dotenv').config()
 // Set up the express app
 const app = express();
 
-app.use(express.static(path.join(__dirname, '/app/public')));
-
+//app.use(express.static(path.join(__dirname, '/app/public')));
+// Express only serves static assets in production
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('app/build'));
+}
 app.get('/', function (req, res) {
   const index = path.join(__dirname, 'public', 'index.html');
  res.sendFile('./index.html');
