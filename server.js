@@ -9,6 +9,7 @@ require('dotenv').config()
 // Set up the express app
 const app = express();
 
+app.set('port', (process.env.PORT || 3001));
 //app.use(express.static(path.join(__dirname, '/app/public')));
 // Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
@@ -75,9 +76,5 @@ app.listen(port, () => {
     console.log('Listening on port', port);
   }
 });
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('app/build'));
-}
 
 module.exports = app;
