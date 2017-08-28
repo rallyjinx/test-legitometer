@@ -69,7 +69,7 @@ app.use(articles);
 app.use(reviews);
 app.use(users);
 
-const port = process.env.PORT || 8888;
+//const port = process.env.PORT || 8888;
 
 app.listen(port, () => {
   if (app.get('env') !== 'test') {
