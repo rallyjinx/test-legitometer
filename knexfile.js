@@ -14,7 +14,7 @@ module.exports = {
     client: 'pg',
     connection: {
       database: 'postgres://kewbgwxxcyknft:ee710b5c2659cde477ef1d21f4c4a2795e9cce46002ca42110cb238ceab7c46c@ec2-107-20-250-195.compute-1.amazonaws.com:5432/d31vq9lfh0sp2c',
-      ssl: true,
+      ssl: false,
     },
 
     // connection: 'postgres://'+ process.env.DB_USER +':'+ process.env.DB_PASS +'@localhost/'+ process.env.DB_NAME,
