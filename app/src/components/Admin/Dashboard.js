@@ -18,7 +18,7 @@ class AdminDashboard extends React.Component {
     axios.get('http://localhost:8888/api/missions')
       .then((res) => {
         //loop through the object and set the state
-        console.log("missions gotten", res.data);
+        console.log("missions gotten", res);
         for(let key in res.data) {
           // assign state to temporary arrays
           let temp_mission = this.state.games.slice();
@@ -26,7 +26,6 @@ class AdminDashboard extends React.Component {
           // push data to arrays - TODO works locally not on heroku
           temp_mission.push(res.data[key].name);
           temp_casefile.push(res.data[key].casefile_name);
-          console.log("HELLO", temp_mission, temp_casefile);
           // set the state
           this.setState({
             games: temp_mission,
