@@ -18,14 +18,14 @@ class AdminDashboard extends React.Component {
     axios.get('http://localhost:8888/api/missions')
       .then((res) => {
         //loop through the object and set the state
-        console.log("missions gotten");
+        console.log("missions gotten", res.data);
         for(let key in res.data) {
           // assign state to temporary arrays
           let temp_mission = this.state.games.slice();
           let temp_casefile = this.state.collections.slice();
           // push data to arrays
-          temp_mission.push(key);
-          temp_casefile.push(res.data[key]);
+          temp_mission.push(res.data[key].name);
+          temp_casefile.push(res.data[key].casefile_name);
           // set the state
           this.setState({
             games: temp_mission,
