@@ -23,9 +23,10 @@ class AdminDashboard extends React.Component {
           // assign state to temporary arrays
           let temp_mission = this.state.games.slice();
           let temp_casefile = this.state.collections.slice();
-          // push data to arrays
+          // push data to arrays - TODO works locally not on heroku
           temp_mission.push(res.data[key].name);
           temp_casefile.push(res.data[key].casefile_name);
+          console.log("HELLO", temp_mission, temp_casefile);
           // set the state
           this.setState({
             games: temp_mission,
